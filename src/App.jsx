@@ -33,9 +33,9 @@ const TodoForm = ({ addTodo }) => {
         type="text"
         value={text}
         onChange={e => setText(e.target.value)}
-        placeholder="할일을 적어 주세요"
+        placeholder="Add a new todo"
       />
-      <button type="submit">추가</button>
+      <button type="submit">Add Todo</button>
     </form>
   );
 };
