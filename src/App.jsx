@@ -1,20 +1,11 @@
-import { useReducer, useState } from 'react';
-
-// useRef 란 저장공간 또는 DOM요소에 접근하기 위해 사용되는 React Hook을 뜻한다
-// useReducer 이란 useState와 약간 비슷한 hook이다 더 많은 기능이 있고 더 복잡한 state에 특히 유용하다.
-
+import React, { useReducer, useState } from 'react';
+import todoReducer from './components/Reducer'
+// import TodoList from './page/TodoList';
+// import TodoForm from './page/TodoForm';
+// import { useRoutes } from "react-router-dom"
+// import { routes } from "./routes.tsx"
 
 // Reducer 함수: 투두 상태를 관리하는 함수
-const todoReducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return [...state, { id: Date.now(), text: action.payload }];
-    case 'DELETE_TODO':
-      return state.filter(todo => todo.id !== action.payload);
-    default:
-      return state;
-  }
-};
 
 // Todo 입력 폼을 담당하는 컴포넌트
 const TodoForm = ({ addTodo }) => {
