@@ -1,8 +1,8 @@
 import React, { useReducer, useState } from 'react';
 import styled from "styled-components";
 import todoReducer from './components/Reducer'
-import TodoList from './page/TodoList';
-import TodoForm from './page/TodoForm';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 const Div = styled.div`
   color : black;
