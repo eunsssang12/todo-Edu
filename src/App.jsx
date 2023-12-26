@@ -1,7 +1,22 @@
 import React, { useReducer, useState } from 'react';
+import styled from "styled-components";
 import todoReducer from './components/Reducer'
 import TodoList from './page/TodoList';
 import TodoForm from './page/TodoForm';
+
+const Div = styled.div`
+  color : black;
+  background: skyblue;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+`
+const H1 = styled.h1`
+
+`
 // 전체 애플리케이션을 관리하는 부모 컴포넌트
 const App = () => {
   // useReducer를 사용하여 상태와 액션을 관리
@@ -18,11 +33,11 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Todo App</h1>
+    <Div>
+      <H1>Todo App</H1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} deleteTodo={deleteTodo} />
-    </div>
+    </Div>
   );
 };
 
